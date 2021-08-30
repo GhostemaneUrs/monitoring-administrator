@@ -1,0 +1,126 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #8556fd;
+  min-height: 100%;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.staatliches {
+  font-family: "Staatliches", cursive;
+}
+
+.font {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 1px;
+}
+
+.error404 {
+  height: 100vh;
+}
+.error_Image {
+  height: 800px;
+}
+
+.fz-20{
+  font-size: 20px;
+}
+
+.listar {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  background: white;
+  border-bottom: 1px solid #e1e1e1;
+  border-radius: 15px;
+  color: black;
+}
+
+.contenedorIndex {
+  border-radius: 20px;
+  background: linear-gradient(145deg, #4c42b6 50%, #594fe4);
+  box-shadow: 5px 5px 10px #463cc1, -5px -5px 10px #5448e7;
+}
+.listar p {
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+.listar p span {
+  font-weight: normal;
+}
+.listar:first-of-type {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.listar:last-of-type {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.button.eliminar,
+.button.eliminar:hover {
+  background-color: #c10059;
+  color: white;
+  margin-top: 2rem;
+}
+
+.alerta-error {
+  background-color: white;
+  color: red;
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Staatliches", cursive;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.mw-112 {
+  width: 100%;
+  max-width: 112px;
+}
+
+.mw-160 {
+  width: 100%;
+  max-width: 160px;
+}
+
+.tm-flecha{
+  width: 15px;
+  position: absolute;
+  top: 12px;
+  cursor: pointer;
+}
+
+@media (min-width:768px) {
+  .tm-flecha{
+    width: 25px;
+    position: absolute;
+    top: 6px;
+    cursor: pointer;
+  }
+  
+}
