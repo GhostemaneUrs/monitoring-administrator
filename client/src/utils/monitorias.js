@@ -59,7 +59,6 @@ export const eliminarMonitoria = async (idMonitoria) => {
 };
 
 export const editarMonitoria = async (value, guardar) => {
-  console.log(value);
   await axios.post(ruta + "editar", value).then((res) => {
     return axios
       .get(ruta + "listar")
