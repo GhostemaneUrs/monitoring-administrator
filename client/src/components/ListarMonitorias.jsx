@@ -70,8 +70,8 @@ const ListarMonitorias = ({
                 }}
               >
                 {actualizar
-                  ? "Ir a agregar monitor"
-                  : "Ir a actualizar monitor"}
+                  ? "Ir a agregar monitoria"
+                  : "Actualizar monitoria"}
               </button>
             </div>
           </div>
