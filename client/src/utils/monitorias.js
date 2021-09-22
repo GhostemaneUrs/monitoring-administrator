@@ -14,7 +14,8 @@ export const agregarMonitoria = async (
         Swal.fire({
           icon: "success",
           text: "Guardado Exitoso",
-          confirmButtonText: "Aceptar",
+          showConfirmButton: false,
+          timer: 1500,
         });
       })
       .catch((e) => {
@@ -48,7 +49,12 @@ export const eliminarMonitoria = async (idMonitoria) => {
   return await axios
     .post(ruta + "eliminar", { id: idMonitoria })
     .then((res) => {
-      console.log(res.data);
+      Swal.fire({
+        icon: "success",
+        title: "Eliminado Exitoso",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     });
 };
 
@@ -62,7 +68,8 @@ export const editarMonitoria = async (value, guardar) => {
         Swal.fire({
           icon: "success",
           text: "Guardado Exitoso",
-          confirmButtonText: "Aceptar",
+          showConfirmButton: false,
+          timer: 1500,
         });
       })
       .catch((e) => {
