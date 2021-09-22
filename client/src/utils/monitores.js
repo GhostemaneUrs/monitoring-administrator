@@ -26,10 +26,11 @@ export const agregarMonitor = async (
           Swal.fire({
             icon: "success",
             text: "Guardado Exitoso",
-            confirmButtonText: "Aceptar",
+            showConfirmButton: false,
+            timer: 1500,
           });
         })
-        .catch((e) => {});
+        .catch((e) => { });
     })
     .catch((e) => {
       if (e.response.status === 400) {
@@ -65,7 +66,12 @@ export const listarMonitor = async (guardarMonitores) => {
 
 export const eliminarMonitor = async (idMonitor) => {
   return await axios.post(ruta + "eliminar", { id: idMonitor }).then((res) => {
-    console.log(res.data);
+    Swal.fire({
+      icon: "success",
+      title: "Eliminado Exitoso",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   });
 };
 
@@ -78,7 +84,8 @@ export const editarMonitor = async (value, guardarMonitores) => {
         Swal.fire({
           icon: "success",
           text: "Guardado Exitoso",
-          confirmButtonText: "Aceptar",
+          showConfirmButton: false,
+          timer: 1500,
         });
       })
       .catch((e) => {
