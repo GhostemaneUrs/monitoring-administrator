@@ -9,4 +9,3 @@ Este documento se ha creado con el fin de poder mostrar el paso a paso para la e
 7.	Una vez asegurándose que se está en la ruta .\server  ejecutar el comando npm i para descargar las dependencias implementadas en el server
 8.	En ambas rutas ejecutaremos en la consola npm start este comando lo que hará es que encenderá nuestros procesos, siempre y la base de datos, el .env estén correctos, el archivo .env debe ser modificador por usted
 9.	Si el paso anterior sale bien, nuestro proceso cliente se abrirá en el puerto 3000 y nuestro proceso server se abrirá en el puerto 9000
-10. Cualquier Inconveniente con la inicializacion del proyecto numero de contacto +573043512931
