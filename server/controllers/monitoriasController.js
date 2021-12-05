@@ -47,7 +47,7 @@ exports.crearMonitorias = (req, res) => {
     "INSERT INTO Monitorias (materia, fecha, hora, salon, estado, monitores_id) VALUES (?,?,?,?,?,?);";
   if (
     materia === "" ||
-    (monitor_id === "") | (fecha === "") ||
+    monitor_id === "" || fecha === "" ||
     hora === "" ||
     salon === ""
   ) {
@@ -59,13 +59,17 @@ exports.crearMonitorias = (req, res) => {
       (error, results, fields) => {
         if (results) {
           sqlListar = "SELECT * FROM Monitorias WHERE id = ?;";
-          db.query(sqlListar, (error, results, fields) => {
-            if (results) {
-              res.status(200).send(results);
-            } else {
-              res.send(error);
+          db.query(
+            sqlListar,
+            [results.insertId],
+            (error, results, fields) => {
+              if (results) {
+                res.status(200).send(results);
+              } else {
+                res.status(400).send(error);
+              }
             }
-          });
+          );
         } else {
           res.status(400).send({ description: "Campos Vacios" });
         }
